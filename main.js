@@ -11,18 +11,6 @@ function rotate() {
     });
   }
 
-function rocketFly() {
-  gsap.to("#rocket", {
-    scrollTrigger: {
-      trigger: "#rocket",
-      start: "top 50%",
-      markers:true,
-      pin: true,
-    },
-    y: -13000,
-  })
-}
-
 function launch() {              // funtion called when clicking begin button to scroll smoothly down to budget section
   rotate()
   //setTimeout(() => {  gsap.to("#rocket", {duration: 6, rotation: 0,  y: -3600}); }, 3000);
