@@ -1,0 +1,362 @@
+/* ======== SVG for Text Box ======= */
+
+:root {
+    --background: #1b0764;
+    --foregroundTransparent: #2a09a17a;
+    --foregroundSolid: #2a09a1;
+}
+
+svg {
+    position: absolute;
+    height: 40vh;
+}
+
+#svgleft {
+    top: 20vh;
+    left: 10vw;
+}
+
+#svgright {
+    top: 20vh;
+    right: 10vw;
+}
+
+#circ1, #rect1, #rect2 {
+    transition: all 1s ease;
+}
+
+#circ1 {
+    fill: var(--foregroundTransparent);
+}
+
+#circ2 {
+    fill: var(--foregroundSolid);
+}
+
+#rect1 {
+    fill: var(--foregroundSolid);
+    width: 0px;
+    transform: translateX(200px);
+}
+
+#rect2 {
+    fill: var(--foregroundSolid);
+    height: 0px;
+}
+
+svg:hover > #circ1 {
+    fill: var(--foregroundSolid);
+    width: 100px;
+    height: 100px;
+    transform: translate(50px, 50px);
+    transition-duration: 0.4s;
+}
+
+svg:hover > #rect1 {
+    transition-delay: 0.4s;
+    transition-duration: 0.4s;
+    width: 400px;
+    transform: translateX(0px);
+}
+
+svg:hover > #rect2 {
+    transition-delay: 0.8s;
+    transition-duration: 0.7s;
+    fill: var(--background);
+    height: 400px;
+    transform: translateY(-200px);
+}
+
+
+
+/* ======== Scroll Bar ======= */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #707070;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(216, 215, 215);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(54, 54, 54);
+  }
+
+/* ========= Animation ========= */
+
+@keyframes clouds {
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.bottomClouds {
+    position: absolute;
+    width: 100vw;
+}
+
+.cloudsMid {
+    animation: clouds 200s linear;
+    animation-iteration-count: infinite;
+    position: absolute;
+    bottom: 110vh;
+    pointer-events: none;
+}
+
+.cloudsFar {
+    animation: clouds 500s linear;
+    animation-iteration-count: infinite;
+    position: absolute;
+    bottom: 50vh;
+    pointer-events: none;
+}
+
+#offScreen {
+    left: -100vw;
+}
+
+
+/* ======== Scroll animations ====== */
+
+.break {
+    height: 800px;
+}
+
+.cloudsLeft, .cloudsRight {
+    width: 60vw;
+    position: absolute;
+}
+
+.cloudsLeft {
+    left: -30vw;
+}
+
+.cloudsRight {
+    right: -30vw;
+    margin-top: 15%;
+    transform: scaleX(-1);
+}
+
+.plane {
+    width: 30vw;
+    position: relative;
+    top: 20vh;
+    right: -100vw;
+    padding: 20vh 0px;
+}
+
+.satellite {
+    width: 30vw;
+    position: relative;
+    left: -30vw;
+    padding: 20vh 0px;
+}
+
+/* ========= Text Styling ======== */
+
+h1 {
+    font-family: monospace;
+}
+
+.header {
+    position: relative;
+    top: 50vh;
+    font-size: 3vw;
+    text-align: center;
+}
+
+.headerLight {
+    color: white;
+    position: relative;
+    top: 50vh;
+    font-size: 3vw;
+    text-align: center;
+}
+
+#title {
+    top: 20vh;
+}
+
+#end {
+    top: 70vh;
+}
+
+/* ======== Image Gallery =========== */
+
+#button {
+    position: absolute;
+    height: 100vh;
+    width: 10vw;
+    left: 50vw;
+    margin-left: -5vw;
+}
+
+#buttonStyle {
+    position: absolute;
+    bottom: 20vh;
+    width: 10vw;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.NFTDrawer {
+    --size: 40vh
+}
+
+.NFTDrawer::part(panel) {
+    background-color: rgba(52, 62, 202, 0.863);
+}
+
+.gallery {
+    padding: 0 2vw;
+    align-items: center;
+}
+
+.gallery #small {
+    width: 10vw;
+    height: 10vw;
+}
+
+.gallery #small:hover {
+    transition: 0.5s;
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+
+
+/* ========= Styling ======== */
+
+.environment {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 12000px;
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-image: linear-gradient(#000000, #11021b, #1a0036, #2b0053, #02005a, #3e0070, #4c0c77, #790f36, #b92b4a, #ffa498,#8dccf7, 
+    #56bafd, #1979b9, #1979b9);
+}
+
+.sections {
+    height: 100vh;
+}
+
+#bottomfloor {
+    pointer-events: none;
+    width: 100%;
+    min-width: 1000px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#rocket {
+    width: 15vw;
+    position: absolute;
+    bottom: 10vh;
+    left: 50vw;
+    margin-left: -7.5vw;
+}
+
+#rocket2 {
+    width: 15vw;
+    position: fixed;
+    top:  10vh;
+    left: 50vw;
+    margin-left: -7.5vw;
+    visibility: hidden;
+}
+
+.stars {
+    position: absolute;
+    top: 0px;
+    width: 130vw;
+    pointer-events: none;
+}
+
+.moon {
+    width: 60vw;
+    position: absolute;
+    left: 50vw;
+    margin-left: -30vw;
+    top: 10vh;
+    pointer-events: none;
+}
+
+.boxes {
+    position: absolute;
+    width: 99vw;
+    height: 99vh;
+}
+
+#text  {
+    color: rgba(0, 0, 0, 0);
+}
+
+.infoBox {
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    background-color: lightblue;
+    border: solid 2px black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.infoBox:hover {
+    transition: 1s;
+    width: 20vw;
+    height: 50vh;
+}
+
+.infoBox:hover > #text {
+    transition: 0.5s;
+    transition-delay: 1s;
+    color: rgb(0, 0, 0);
+    margin: 5px;
+}
+
+#left {
+    left: 10vw;
+    top: 20vh;
+}
+
+#right {
+    right: 10vw;
+    top: 20vh;
+}
+
+.bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    height: 100vh;
+}
+
+.launch {
+    margin-left: -50px;
+    height: 50px;
+    width: 100px;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgb(172, 30, 30);
+    position: absolute;
+    left: 50vw;
+    bottom: 20px;
+}
+
+
+
+
