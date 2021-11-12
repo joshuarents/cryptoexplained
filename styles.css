@@ -1,4 +1,6 @@
-/* ======== SVG for Text Box ======= */
+/* ========= Styling ========= */
+
+/* ======== SVG for Text Box on Home Page ======= */
 
 :root {
     --background: #1b0764;
@@ -44,6 +46,8 @@ svg {
     height: 0px;
 }
 
+/* ========= SVG animation for when the mouse hovers over it ========= */
+
 svg:hover > #circ1 {
     fill: var(--foregroundSolid);
     width: 100px;
@@ -67,31 +71,25 @@ svg:hover > #rect2 {
     transform: translateY(-200px);
 }
 
-
-
 /* ======== Scroll Bar ======= */
 
-/* width */
-::-webkit-scrollbar {
+    ::-webkit-scrollbar {
     width: 10px;
   }
   
-  /* Track */
   ::-webkit-scrollbar-track {
     background: #707070;
   }
   
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: rgb(216, 215, 215);
   }
-  
-  /* Handle on hover */
+
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(54, 54, 54);
   }
 
-/* ========= Animation ========= */
+/* ========= Cloud Animation Bottom of Screen ========= */
 
 @keyframes clouds {
     100% {
@@ -125,7 +123,7 @@ svg:hover > #rect2 {
 }
 
 
-/* ======== Scroll animations ====== */
+/* ======== Scroll animations in Break Sections ====== */
 
 .break {
     height: 800px;
@@ -190,7 +188,7 @@ h1 {
     top: 70vh;
 }
 
-/* ======== Image Gallery =========== */
+/* ======== Image Gallery (Container Styling) =========== */
 
 #button {
     position: absolute;
@@ -210,6 +208,8 @@ h1 {
     display: flex;
     justify-content: space-evenly;
 }
+
+/* ======== Image Gallery (Shoelace Drawer and Gallery) =========== */
 
 .NFTDrawer {
     --size: 40vh
@@ -236,7 +236,7 @@ h1 {
 }
 
 
-/* ========= Styling ======== */
+/* ========= Styling for Main Page and Background Elements ======== */
 
 .environment {
     position: absolute;
@@ -254,31 +254,6 @@ h1 {
     height: 100vh;
 }
 
-#bottomfloor {
-    pointer-events: none;
-    width: 100%;
-    min-width: 1000px;
-    position: absolute;
-    bottom: 0px;
-}
-
-#rocket {
-    width: 15vw;
-    position: absolute;
-    bottom: 10vh;
-    left: 50vw;
-    margin-left: -7.5vw;
-}
-
-#rocket2 {
-    width: 15vw;
-    position: fixed;
-    top:  10vh;
-    left: 50vw;
-    margin-left: -7.5vw;
-    visibility: hidden;
-}
-
 .stars {
     position: absolute;
     top: 0px;
@@ -294,6 +269,8 @@ h1 {
     top: 10vh;
     pointer-events: none;
 }
+
+/* ========= Text Boxes ======== */
 
 .boxes {
     position: absolute;
@@ -338,6 +315,33 @@ h1 {
     top: 20vh;
 }
 
+/* ========= Styling for Images and Button ======== */
+
+#bottomfloor {
+    pointer-events: none;
+    width: 100%;
+    min-width: 1000px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#rocket {
+    width: 15vw;
+    position: absolute;
+    bottom: 10vh;
+    left: 50vw;
+    margin-left: -7.5vw;
+}
+
+#rocket2 {
+    width: 15vw;
+    position: fixed;
+    top:  10vh;
+    left: 50vw;
+    margin-left: -7.5vw;
+    visibility: hidden;
+}
+
 .bottom {
     width: 100%;
     position: absolute;
@@ -356,7 +360,3 @@ h1 {
     left: 50vw;
     bottom: 20px;
 }
-
-
-
-
